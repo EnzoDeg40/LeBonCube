@@ -29,6 +29,12 @@ Créer la base de données si elle n'existe pas :
 php bin/console doctrine:database:create
 ```
 
+Executer les migrations :
+
+```bash
+php bin/console doctrine:migrations:migrate
+```
+
 ## Exécution
 
 Lancer le serveur :
