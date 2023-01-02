@@ -29,6 +29,14 @@ class Annonce
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $updated_at = null;
 
+    #[ORM\ManyToOne(inversedBy: 'annonces')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?user $user = null;
+
+    #[ORM\ManyToOne(inversedBy: 'annonces')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?categorie $categorie = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +98,30 @@ class Annonce
     public function setUpdatedAt(\DateTimeInterface $updated_at): self
     {
         $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    public function getUser(): ?user
+    {
+        return $this->user;
+    }
+
+    public function setUser(?user $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?categorie $categorie): self
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }
