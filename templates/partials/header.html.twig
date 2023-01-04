@@ -1,5 +1,12 @@
 <div id="header">
     <h1><a href="{{ path('home') }}">Le Bon Cube</a></h1>
     <a href="#">Déposer une annoncer</a>
-    <a href="#">Se connecter</a>
+    {% if is_granted('ROLE_USER') %}
+        <a href="{{ path('app_logout') }}">Se déconnecter</a>
+        <div class="separator"></div>
+        {{ app.user.email }}
+    {% else %}
+        <a href="{{ path('app_login') }}">Se connecter</a>
+        <a href="{{ path('app_register') }}">S'inscrire</a>
+    {% endif %}
 </div>
