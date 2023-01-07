@@ -29,13 +29,13 @@ class Annonce
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $updated_at = null;
 
-    #[ORM\ManyToOne(inversedBy: 'annonces')]
+    #[ORM\ManyToOne(inversedBy: 'annonce')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?user $user = null;
+    private ?User $user = null;
 
-    #[ORM\ManyToOne(inversedBy: 'annonces')]
+    #[ORM\ManyToOne(inversedBy: 'annonce')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?categorie $categorie = null;
+    private ?Categorie $categorie = null;
 
     public function getId(): ?int
     {
@@ -78,12 +78,12 @@ class Annonce
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?\DateTime
     {
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    public function setCreatedAt(\DateTime $created_at): self
     {
         $this->created_at = $created_at;
 
@@ -102,24 +102,24 @@ class Annonce
         return $this;
     }
 
-    public function getUser(): ?user
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(?user $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 
         return $this;
     }
 
-    public function getCategorie(): ?categorie
+    public function getCategorie(): ?Categorie
     {
         return $this->categorie;
     }
 
-    public function setCategorie(?categorie $categorie): self
+    public function setCategorie(?Categorie $categorie): self
     {
         $this->categorie = $categorie;
 

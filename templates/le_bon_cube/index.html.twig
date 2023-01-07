@@ -4,8 +4,8 @@
 
 {% block body %}
 <div class="list">
-    {% for i in 1..5 %}
-        {% include 'partials/miniature.html.twig' with { item } %}    
+    {% for item in items %}
+        {% include 'partials/miniature.html.twig' with { item } %}
     {% endfor %}
 </div>
 {% endblock %}

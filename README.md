@@ -35,6 +35,12 @@ Executer les migrations :
 php bin/console doctrine:migrations:migrate
 ```
 
+Remplir la base de données avec des données de test :
+
+```bash
+php bin/console doctrine:database:import template.sql
+```
+
 ## Exécution
 
 Lancer le serveur :

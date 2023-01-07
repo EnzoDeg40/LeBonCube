@@ -14,7 +14,7 @@ body {
     color: white;
     gap: 10px;
 
-    h1{
+    h1 {
         margin: 0;
         font-size: 16px;
     }
@@ -28,7 +28,44 @@ body {
         }
     }
 
-    .separator{
+    .separator {
         flex-grow: 1;
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+        $radius: 7.5px;
+
+        margin: 10px;
+        width: 350px;
+        border: 1px solid gray;
+        border-radius: $radius;
+
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+            border-radius: $radius $radius 0 0;
+            border-bottom: 1px solid gray;
+        }
+
+        span{
+            padding: 5px 15px;
+        }   
+
+        .title {
+            color: rgb(20, 111, 191);
+        }
+
+        .date {
+            border-top: 1px solid gray;
+            border-radius: 0 0 $radius $radius;
+            background-color: #cccccc;
+        }
     }
 }
