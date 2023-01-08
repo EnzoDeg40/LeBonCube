@@ -3,9 +3,9 @@
 {% block title %}Le Bon Cube{% endblock %}
 
 {% block body %}
-<div class="list">
-    {% for item in items %}
-        {% include 'partials/miniature.html.twig' with { item } %}
-    {% endfor %}
-</div>
+    <div class="list">
+        {% for item in items %}
+            {% include 'partials/miniature.html.twig' with { item } %}
+        {% endfor %}
+    </div>
 {% endblock %}
