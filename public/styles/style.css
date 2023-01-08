@@ -29,6 +29,25 @@ body {
   flex-grow: 1;
 }
 
+#connexion .inputs {
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 256px;
+}
+#connexion .inputs hr {
+  border: 0;
+  border-top: 1px solid #cccccc;
+  width: 100%;
+}
+#connexion .inputs .alert-danger {
+  color: rgb(155, 18, 18);
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;
