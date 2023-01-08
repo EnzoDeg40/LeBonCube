@@ -33,6 +33,43 @@ body {
     }
 }
 
+#footer{
+    padding: 20px;
+    background-color: #343b3f;
+    color: white;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }  
+}
+
+#connexion{   
+    .inputs{
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 256px;
+        hr{
+            border: 0;
+            border-top: 1px solid #cccccc;
+            width: 100%;
+        }
+        .alert-danger{
+            color: rgb(155, 18, 18);
+        }
+    }
+}
+
 .list {
     display: flex;
     flex-wrap: wrap;
