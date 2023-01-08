@@ -21,4 +21,15 @@ class LeBonCubeController extends AbstractController
             'items' => $items
         ]);
     }
+
+    #[Route('/{id}', name: 'show')]
+    public function show($id): Response
+    {
+        // Récupère une annonce de la base de données
+        $item = $this->getDoctrine()->getRepository(Annonce::class)->find($id);
+
+        return $this->render('le_bon_cube/show.html.twig', [
+            'item' => $item
+        ]);
+    }
 }

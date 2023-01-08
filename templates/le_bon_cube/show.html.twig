@@ -1,8 +1,12 @@
-<div class="item">
-    <a href="{{ path('show', {id:item.id}) }}"><img src="https://via.placeholder.com/350x200" class="card-img-top" alt="..."></a>
+{% extends 'base.html.twig' %}
+
+{% block title %}Article Name - Le Bon Cube{% endblock %}
+
+{% block body %}
+    <img src="https://via.placeholder.com/900x400" class="card-img-top" alt="...">
     <span class="title">{{ item.title }}</span>
     <span class="price">{{ item.price }} €</span>
     <span class="desc">{{ item.description }}</span>
     <span class="categorie">{{ item.categorie.id }}</span>
     <span class="date">{{ item.createdat|date('d/m/Y à H:i') }}</span>
-</div>
+{% endblock %}
