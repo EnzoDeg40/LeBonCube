@@ -33,6 +33,22 @@ body {
     }
 }
 
+#footer{
+    padding: 20px;
+    background-color: #343b3f;
+    color: white;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }  
+}
+
 #connexion{   
     .inputs{
         background-color: white;
